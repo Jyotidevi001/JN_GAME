@@ -30,6 +30,8 @@ namespace App05MonoGame.Controllers
         private App05Game game;
 
         private Texture2D copperCoinSheet;
+        private Texture2D silverCoinSheet;
+        private Texture2D goldCoinSheet;
 
         private readonly List<AnimatedSprite> Coins;        
 
@@ -42,7 +44,9 @@ namespace App05MonoGame.Controllers
             Coins = new List<AnimatedSprite>();
 
             copperCoinSheet = game.Content.Load<Texture2D>("Actors/coin_copper");
-            
+            silverCoinSheet = game.Content.Load<Texture2D>("Actors/coin_silver");
+            goldCoinSheet = game.Content.Load<Texture2D>("Actors/coin_gold");
+
             CreateCoin();
         }
 
@@ -84,6 +88,8 @@ namespace App05MonoGame.Controllers
                     coin.IsActive = false;
                     coin.IsAlive = false;
                     coin.IsVisible = false;
+                    sprite.Score.Value += 10;
+                    sprite.Energy.Value -= 10;
                 }
             }           
         }

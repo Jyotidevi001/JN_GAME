@@ -36,9 +36,9 @@ namespace App05MonoGame
         public const int Game_Height = 720;
         public const int Game_Width = 1280;
 
-        public const string GameName = "Game Name";
-        public const string ModuleName = "BNU CO453 2021";
-        public const string AuthorNames = "Derek & Andrei";
+        public const string GameName = "JN_Game";
+        public const string ModuleName = "BNU CO453 2022";
+        public const string AuthorNames = "Narinder and Jyoti";
         public const string AppName = "App05: C# MonoGame";
 
         #endregion
@@ -68,7 +68,7 @@ namespace App05MonoGame
 
         private StartScreen startScreen;
         private CoinsScreen coinsScreen;
-        private AsteroidsScreen asteroidsScreen;
+        
 
         #endregion
 
@@ -148,9 +148,7 @@ namespace App05MonoGame
                 
                 // Asteroids Game
                 case GameStates.PlayingLevel2:
-                    if (asteroidsScreen == null)
-                        asteroidsScreen = new AsteroidsScreen(this);
-                    asteroidsScreen.Update(gameTime);
+                    
                     break;
                 
                 case GameStates.Ending:
@@ -185,8 +183,7 @@ namespace App05MonoGame
                     break;
 
                 case GameStates.PlayingLevel2:
-                    if (asteroidsScreen != null)
-                        asteroidsScreen.Draw(spriteBatch, gameTime);
+                   
                     break;
 
                 case GameStates.Ending:

@@ -181,8 +181,8 @@ namespace App05MonoGame.Screens
         {
             // TODO: Use the Sprite's score and energy
 
-            int score = 0;
-            int energy = 100;
+            int score = playerSprite.Score.Value;
+            int energy = playerSprite.Energy.Value;
 
             int topMargin = 4;
             int sideMargin = 50;

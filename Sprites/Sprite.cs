@@ -73,8 +73,8 @@ namespace App05MonoGame.Sprites
             }
         }
 
-        public SpriteAttribute Score { get; }
-        public SpriteAttribute Energy { get; }
+        public SpriteAttribute Score { get; set; }
+        public SpriteAttribute Energy { get; set; }
 
         // Variables
 
